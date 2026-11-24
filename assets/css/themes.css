@@ -1,0 +1,99 @@
+/* ==========================================================
+   THEMES — every colour decision lives here.
+   Dark = warm ink + vermilion. Light = warm paper + deep vermilion.
+   Each is tuned separately (not an inversion).
+   ========================================================== */
+
+:root {
+  --font-display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Type scale */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.9rem;
+  --fs-base: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);
+  --fs-lg: clamp(1.1rem, 1.02rem + 0.35vw, 1.3rem);
+  --fs-h3: clamp(1.45rem, 1.2rem + 1vw, 2rem);
+  --fs-h2: clamp(2.5rem, 1.5rem + 4.2vw, 5rem);
+  --fs-h1: clamp(3.2rem, 0.8rem + 9.2vw, 9rem);
+
+  /* Spacing */
+  --sp-1: 0.25rem; --sp-2: 0.5rem; --sp-3: 0.75rem; --sp-4: 1rem;
+  --sp-5: 1.5rem; --sp-6: 2rem; --sp-7: 3rem; --sp-8: 4.5rem;
+  --sp-9: clamp(5rem, 3rem + 8vw, 10rem);
+
+  /* Radius */
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-pill: 999px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 150ms;
+  --dur: 280ms;
+  --dur-slow: 700ms;
+
+  --container: 1240px;
+  --nav-h: 76px;
+}
+
+/* ---------- DARK ---------- */
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0d0d0c;
+  --bg-elev: #131311;
+  --surface: #171715;
+  --surface-2: #1f1f1c;
+  --border: rgba(236, 233, 225, 0.12);
+  --border-strong: rgba(236, 233, 225, 0.26);
+
+  --text: #ece9e1;
+  --text-muted: #a3a097;
+  --text-faint: #6f6d65;
+
+  --accent: #ff6a3d;
+  --accent-strong: #ff6a3d;
+  --accent-soft: rgba(255, 106, 61, 0.12);
+  --on-accent: #0d0d0c;
+
+  --success: #6ee7a8;
+  --danger: #ff8a8a;
+
+  --nav-bg: rgba(13, 13, 12, 0.92);
+  --icon-neutral: #ece9e1;
+  --shadow-lg: 0 40px 80px -30px rgba(0, 0, 0, 0.8);
+}
+
+/* ---------- LIGHT ---------- */
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f2efe8;
+  --bg-elev: #f8f6f0;
+  --surface: #fbfaf6;
+  --surface-2: #e8e4d9;
+  --border: rgba(18, 18, 16, 0.14);
+  --border-strong: rgba(18, 18, 16, 0.32);
+
+  --text: #121210;
+  --text-muted: #55524a;
+  --text-faint: #86837a;
+
+  --accent: #c7380a;
+  --accent-strong: #c7380a;
+  --accent-soft: rgba(199, 56, 10, 0.09);
+  --on-accent: #ffffff;
+
+  --success: #0b7a4b;
+  --danger: #b4231f;
+
+  --nav-bg: rgba(242, 239, 232, 0.94);
+  --icon-neutral: #121210;
+  --shadow-lg: 0 40px 70px -34px rgba(40, 30, 10, 0.35);
+}
+
+/* Theme cross-fade via the View Transitions API (handled in theme.js) */
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: 320ms; }

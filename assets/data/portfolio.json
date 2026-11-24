@@ -1,0 +1,599 @@
+{
+  "design": {
+    "defaultTheme": "system",
+    "animations": true,
+    "accent": ""
+  },
+  "seo": {
+    "title": "Ahmad Riaz — PHP Laravel & Backend Developer",
+    "description": "Ahmad Riaz is a PHP Laravel & Backend Developer who builds scalable, reliable, modern web applications and powerful backend solutions.",
+    "keywords": "Laravel developer, PHP developer, backend developer, REST API, MySQL, full stack developer",
+    "url": "",
+    "ogImage": "",
+    "themeColor": "#0a0a0f"
+  },
+  "personal": {
+    "name": "Ahmad Riaz",
+    "title": "PHP Laravel & Backend Developer",
+    "profileImage": "assets/images/profile/dev.png",
+    "profileAlt": "Portrait of Ahmad Riaz",
+    "email": "devahmad42@gmail.com",
+    "phone": "+92-3057549961",
+    "location": "Pakistan",
+    "availability": true,
+    "availabilityText": "Available for new projects",
+    "unavailableText": "Currently booked"
+  },
+  "socials": {
+    "github": "https://github.com/42webok",
+    "linkedin": "https://www.linkedin.com/in/ahmad-riaz-73ba362b0/",
+    "fiverr": "https://www.fiverr.com/ahmad_web_dev_",
+    "upwork": "https://www.upwork.com/freelancers/~012357e507a8721a37",
+    "whatsapp": "https://wa.me/923057549961"
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "target": "home"
+    },
+    {
+      "label": "About",
+      "target": "about"
+    },
+    {
+      "label": "Skills",
+      "target": "skills"
+    },
+    {
+      "label": "Projects",
+      "target": "projects"
+    },
+    {
+      "label": "Experience",
+      "target": "experience"
+    },
+    {
+      "label": "Services",
+      "target": "services"
+    },
+    {
+      "label": "Education",
+      "target": "education"
+    },
+    {
+      "label": "Contact",
+      "target": "contact"
+    }
+  ],
+  "sections": {
+    "about": {
+      "eyebrow": "About",
+      "title": "Backend craft, with the user in mind",
+      "subtitle": "How I think, build and ship."
+    },
+    "skills": {
+      "eyebrow": "Skills",
+      "title": "The technology I work with",
+      "subtitle": "A focused toolkit for building dependable web applications."
+    },
+    "projects": {
+      "eyebrow": "Projects",
+      "title": "Selected work",
+      "subtitle": "A look at what I build. Open any project for details."
+    },
+    "experience": {
+      "eyebrow": "Experience",
+      "title": "Professional experience",
+      "subtitle": "Where I have applied these skills."
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "How I can help your business",
+      "subtitle": "Clear, reliable engineering for products that need to last."
+    },
+    "process": {
+      "eyebrow": "Process",
+      "title": "A workflow you can rely on",
+      "subtitle": "From first conversation to long-term support."
+    },
+    "education": {
+      "eyebrow": "Education",
+      "title": "Academic background",
+      "subtitle": ""
+    },
+    "resume": {
+      "eyebrow": "Resume",
+      "title": "My resume at a glance",
+      "subtitle": ""
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Have a Project in Mind? Let's Build Something Great Together.",
+      "subtitle": "Tell me what you need. I will reply with next steps and an honest assessment."
+    }
+  },
+  "hero": {
+    "eyebrow": "Hello, I'm Ahmad Riaz",
+    "headline": "Building Scalable Digital Experiences",
+    "highlight": "Digital Experiences",
+    "description": "I'm a PHP Laravel & Backend Developer. I build scalable, reliable, modern web applications and powerful backend solutions that businesses can grow on.",
+    "primaryCta": {
+      "label": "View My Work",
+      "target": "projects"
+    },
+    "secondaryCta": {
+      "label": "Let's Work Together",
+      "target": "contact"
+    },
+    "floatingTech": [
+      "laravel",
+      "php",
+      "mysql",
+      "git"
+    ],
+    "scrollLabel": "Scroll"
+  },
+  "about": {
+    "lead": "I design and build the server-side of web products: clean architecture, dependable APIs and databases that stay fast as they grow.",
+    "paragraphs": [
+      "My work centres on PHP and Laravel, backed by MySQL and solid front-end fundamentals in HTML, CSS and JavaScript. That mix lets me own a feature from the database all the way to the screen.",
+      "I approach every task by understanding the real problem first, then choosing the simplest design that will still hold up when the product, the traffic and the team get bigger."
+    ],
+    "journey": "Replace this text with a short note about your own development journey: how you started, what you learned and where you are heading.",
+    "approach": "Understand the problem, plan the architecture, build in small verified steps, then measure and refine.",
+    "philosophy": "Readable code is a feature. If the next developer cannot understand it quickly, it is not finished.",
+    "pillars": [
+      {
+        "icon": "lucide:code-xml",
+        "title": "Clean code",
+        "text": "Readable, consistent and easy to extend."
+      },
+      {
+        "icon": "lucide:layers",
+        "title": "Scalable architecture",
+        "text": "Structure that grows with your product."
+      },
+      {
+        "icon": "lucide:gauge",
+        "title": "Performance",
+        "text": "Optimised queries, caching and fast responses."
+      },
+      {
+        "icon": "lucide:shield-check",
+        "title": "Security",
+        "text": "Validation, authorisation and safe defaults."
+      },
+      {
+        "icon": "lucide:user",
+        "title": "User experience",
+        "text": "Backends that make great interfaces possible."
+      }
+    ],
+    "stats": [
+      {
+        "label": "Technologies",
+        "auto": "skills",
+        "icon": "lucide:cpu"
+      },
+      {
+        "label": "Professional focus",
+        "text": "Laravel & APIs",
+        "icon": "lucide:target"
+      },
+      {
+        "label": "Core stack",
+        "text": "PHP · MySQL",
+        "icon": "lucide:database"
+      }
+    ]
+  },
+  "skillCategories": [
+    {
+      "id": "frontend",
+      "name": "Frontend Development"
+    },
+    {
+      "id": "backend",
+      "name": "Backend Development"
+    },
+    {
+      "id": "database",
+      "name": "Database"
+    },
+    {
+      "id": "tools",
+      "name": "Tools & Platforms"
+    },
+    {
+      "id": "additional",
+      "name": "Additional Knowledge"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Laravel",
+      "category": "backend",
+      "icon": "laravel",
+      "color": "#FF2D20",
+      "featured": true,
+      "description": "Modern, expressive PHP framework for full web applications, queues, auth and APIs."
+    },
+    {
+      "name": "PHP",
+      "category": "backend",
+      "icon": "php",
+      "color": "#777BB4",
+      "featured": true,
+      "description": "Core backend language: OOP, clean architecture and secure server-side logic."
+    },
+    {
+      "name": "CodeIgniter",
+      "category": "backend",
+      "icon": "codeigniter",
+      "color": "#EF4223",
+      "description": "Lightweight PHP framework for fast, simple projects."
+    },
+    {
+      "name": "REST API Development",
+      "category": "backend",
+      "icon": "lucide:network",
+      "color": "",
+      "description": "Well-structured, documented and secure JSON APIs."
+    },
+    {
+      "name": "MySQL",
+      "category": "database",
+      "icon": "mysql",
+      "color": "#4479A1",
+      "featured": true,
+      "description": "Schema design, indexing and query optimisation."
+    },
+    {
+      "name": "JavaScript",
+      "category": "frontend",
+      "icon": "javascript",
+      "color": "#F7DF1E",
+      "description": "Modern ES6+ for interactive interfaces."
+    },
+    {
+      "name": "HTML5",
+      "category": "frontend",
+      "icon": "html5",
+      "color": "#E34F26",
+      "description": "Semantic, accessible markup."
+    },
+    {
+      "name": "CSS3",
+      "category": "frontend",
+      "icon": "css",
+      "color": "#1572B6",
+      "description": "Responsive layouts and animation."
+    },
+    {
+      "name": "Bootstrap",
+      "category": "frontend",
+      "icon": "bootstrap",
+      "color": "#7952B3",
+      "description": "Rapid responsive UI."
+    },
+    {
+      "name": "Tailwind CSS",
+      "category": "frontend",
+      "icon": "tailwindcss",
+      "color": "#06B6D4",
+      "description": "Utility-first styling."
+    },
+    {
+      "name": "jQuery",
+      "category": "frontend",
+      "icon": "jquery",
+      "color": "#0769AD",
+      "description": "DOM scripting and legacy UI support."
+    },
+    {
+      "name": "AJAX",
+      "category": "frontend",
+      "icon": "lucide:refresh-cw",
+      "color": "",
+      "description": "Asynchronous requests without page reloads."
+    },
+    {
+      "name": "Git",
+      "category": "tools",
+      "icon": "git",
+      "color": "#F05032",
+      "description": "Version control and branching workflows."
+    },
+    {
+      "name": "GitHub",
+      "category": "tools",
+      "icon": "github",
+      "color": "",
+      "description": "Collaboration, reviews and CI."
+    },
+    {
+      "name": "WordPress",
+      "category": "tools",
+      "icon": "wordpress",
+      "color": "#21759B",
+      "description": "CMS setup, themes and customisation."
+    },
+    {
+      "name": "React",
+      "category": "additional",
+      "icon": "react",
+      "color": "#61DAFB",
+      "description": "Basic working knowledge."
+    },
+    {
+      "name": "Java",
+      "category": "additional",
+      "icon": "openjdk",
+      "color": "#ED8B00",
+      "description": "Fundamentals and OOP concepts."
+    },
+    {
+      "name": "GSAP",
+      "category": "additional",
+      "icon": "greensock",
+      "color": "#88CE02",
+      "description": "Advanced web animation."
+    }
+  ],
+  "projectCategories": [
+    "Laravel",
+    "PHP",
+    "Full Stack",
+    "Other"
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "sample": true,
+      "title": "MediHub",
+      "category": "Laravel",
+      "description": "Smart Healthcare Prescription Desk — a multi-tenant hospital platform with e-prescriptions and AI interaction checks, a patient health vault, real-time care-team chat, an AI assistant grounded in hospital documents (RAG), RFID self check-in, and a Free / Paid billing engine.",
+      "details": "Coverage includes tenant isolation (queries, route-model binding, files, chat, AI retrieval, kiosks), RBAC for every role, prescription issuing / signing / QR verification, billing in Free and Paid Mode, real-time channel authorisation, RFID token security, and a check that every menu link opens for every role.",
+      "image": "assets/images/projects/medihub2.jpeg",
+      "imageAlt": "Smart Healthcare Prescription Desk",
+      "technologies": [
+        "Laravel",
+        "PHP",
+        "Python FastAPI",
+        "ChromaDB",
+        "ESP32 + RC522"
+      ],
+      "liveUrl": "",
+      "githubUrl": "",
+      "featured": true,
+      "screenshots": [
+        {
+          "src": "assets/images/projects/medihub1.jpeg",
+          "alt": "Smart Healthcare Prescription Desk, screen 1"
+        },
+        {
+          "src": "assets/images/projects/medihub2.jpeg",
+          "alt": "Smart Healthcare Prescription Desk, screen 2"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "sample": true,
+      "title": "Rivaaj — Pakistani Clothing E-Commerce Platform",
+      "category": "Laravel",
+      "description": "Storefront: home, shop with filters (price/size/colour/brand/rating), search with live suggestions, product pages with gallery zoom and variant picker.",
+      "details": "Admin panel: dashboard with charts, full product/category/brand catalog with variants & images, orders with status flow + invoices/packing slips (PDF), payments verification, returns/refunds, coupons, flash sales, banners, shipping (cities/provinces/couriers), finance (expenses + P&L reports, Excel/PDF/CSV export), inventory with stock history, CMS (pages/menus/FAQ/blog), contact inbox, reviews moderation, email templates with live preview + send test, SEO settings + redirect manager + 404 log, site settings, staff & role-based permissions, activity log.",
+      "image": "assets/images/projects/rivaaj-portfolio-showcase.png",
+      "imageAlt": "Rivaaj — Pakistani Clothing E-Commerce Platform preview",
+      "technologies": [
+        "Laravel",
+        "MySQL",
+        "PHP",
+        "JavaScript",
+        "AJAX",
+        "Bootstrap"
+      ],
+      "liveUrl": "",
+      "githubUrl": "",
+      "featured": false,
+      "screenshots": [
+        {
+          "src": "assets/images/projects/rivaaj-portfolio-showcase.png",
+          "alt": "Rivaaj — Pakistani Clothing E-Commerce Platform, screen 1"
+        },
+        {
+          "src": "assets/images/projects/rivaaj-portfolio-showcase-2.png",
+          "alt": "Rivaaj — Pakistani Clothing E-Commerce Platform, screen 2"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "sample": true,
+      "title": "Student engagement with AI and Data Analytics",
+      "category": "Full Stack",
+      "description": "Student engagement is an important factor in academic success. In online and blended learning environments, students interact with different activities",
+      "details": "This project proposes a web-based Student Engagement Analytics System using AI. The system will collect academic and activity data, calculate an engagement score, classify students into engagement levels, and show visual dashboards for teachers and students.",
+      "image": "assets/images/projects/engagementai-portfolio-showcase.png",
+      "imageAlt": "Student engagement with AI and Data Analytics preview",
+      "technologies": [
+        "Laravel",
+        "JavaScript",
+        "Python",
+        "MySQL"
+      ],
+      "liveUrl": "",
+      "githubUrl": "",
+      "featured": false,
+      "screenshots": []
+    },
+    {
+      "id": 4,
+      "sample": true,
+      "title": "School Fee & Finance Manager",
+      "category": "Other",
+      "description": "A complete fee voucher, collection and finance management system for schools, with PDF, Email and WhatsApp reminders.",
+      "details": "School Fee & Finance Manager ek web-based system hai jo schools ke fee collection aur accounts ka poora kaam automate karta hai. Admin ek click mein monthly fee vouchers generate kar sakta hai, payments record kar sakta hai, aur income-expense ka live hisaab dekh sakta hai. Vouchers PDF mein download hote hain, aur parents ko Email ya WhatsApp se bheje ja sakte hain, reminders ke saath. System PKR currency, class-wise fee structure aur late-fine rules ko support karta hai.",
+      "image": "assets/images/projects/school-fee-portfolio-showcase.png",
+      "imageAlt": "School Fee & Finance Manager preview",
+      "technologies": [
+        "Laravel",
+        "MySQL",
+        "AJAX",
+        "HTML",
+        "JavaScript"
+      ],
+      "liveUrl": "",
+      "githubUrl": "",
+      "featured": false,
+      "screenshots": []
+    },
+    {
+      "id": 5,
+      "sample": true,
+      "title": "Smart Campus Management System",
+      "category": "Laravel",
+      "description": "Smart Campus Management System is a comprehensive web-based educational management platform designed to digitize and simplify daily academic and administrative activities within educational institutions.",
+      "details": "Smart Campus Management System is a complete role-based campus management solution that combines academic management, student information management, examination systems, attendance tracking, fee management, and administrative reporting into one centralized web application.",
+      "image": "assets/images/projects/smartcampus.png",
+      "imageAlt": "Smart Campus Management System",
+      "technologies": [
+        "Laravel",
+        "MySQL",
+        "HTML",
+        "JavaScript"
+      ],
+      "liveUrl": "",
+      "githubUrl": "",
+      "featured": false,
+      "screenshots": []
+    }
+  ],
+  "experience": [
+    {
+      "sample": true,
+      "company": "Your Company Name",
+      "title": "Your Job Title",
+      "type": "Full-time",
+      "start": "Month Year",
+      "end": "Present",
+      "description": "Sample entry. Replace with a real position, or delete this object to hide the section content.",
+      "responsibilities": [
+        "Describe a key responsibility.",
+        "Describe a measurable outcome you can verify."
+      ],
+      "technologies": [
+        "Laravel",
+        "PHP",
+        "MySQL"
+      ]
+    }
+  ],
+  "services": [
+    {
+      "icon": "lucide:code-xml",
+      "title": "Custom Laravel Web Development",
+      "description": "Tailor-made web applications built on Laravel with clean, maintainable architecture."
+    },
+    {
+      "icon": "lucide:server",
+      "title": "PHP Backend Development",
+      "description": "Reliable server-side logic, authentication, business rules and integrations."
+    },
+    {
+      "icon": "lucide:network",
+      "title": "REST API Development & Integration",
+      "description": "Secure, well-documented APIs and third-party service integrations."
+    },
+    {
+      "icon": "lucide:bug",
+      "title": "Laravel Bug Fixing & Error Resolution",
+      "description": "Fast diagnosis and lasting fixes for errors, crashes and unexpected behaviour."
+    },
+    {
+      "icon": "lucide:database",
+      "title": "Database Design & Optimization",
+      "description": "Efficient schemas, indexes and queries that keep your app responsive."
+    },
+    {
+      "icon": "lucide:gauge",
+      "title": "Website Performance Optimization",
+      "description": "Faster load times through caching, query tuning and leaner delivery."
+    },
+    {
+      "icon": "lucide:layers",
+      "title": "Full-Stack Web Application Development",
+      "description": "End-to-end delivery from database to polished, responsive interface."
+    },
+    {
+      "icon": "lucide:life-buoy",
+      "title": "Website Maintenance & Support",
+      "description": "Updates, monitoring and dependable help after launch."
+    }
+  ],
+  "process": [
+    {
+      "number": "01",
+      "icon": "lucide:search",
+      "title": "Discovery & Requirements",
+      "text": "We clarify goals, users and scope so the right thing gets built."
+    },
+    {
+      "number": "02",
+      "icon": "lucide:compass",
+      "title": "Planning & Architecture",
+      "text": "Data model, API design and a clear delivery plan."
+    },
+    {
+      "number": "03",
+      "icon": "lucide:layout-template",
+      "title": "UI/UX & Development",
+      "text": "Iterative builds with regular check-ins and working previews."
+    },
+    {
+      "number": "04",
+      "icon": "lucide:flask-conical",
+      "title": "Testing & Optimization",
+      "text": "Testing, security review and performance tuning."
+    },
+    {
+      "number": "05",
+      "icon": "lucide:rocket",
+      "title": "Deployment & Support",
+      "text": "Smooth launch followed by ongoing maintenance."
+    }
+  ],
+  "education": [
+    {
+      "sample": true,
+      "degree": "Your Degree Title",
+      "institution": "Your University",
+      "location": "City, Country",
+      "start": "Year",
+      "end": "Year",
+      "details": "Sample entry. Add relevant coursework, achievements or thesis information, or replace it with your real education."
+    }
+  ],
+  "resume": {
+    "pdf": "",
+    "downloadName": "Ahmad_Riaz_42webok.pdf",
+    "summary": "PHP Laravel & Backend Developer focused on scalable, reliable web applications, REST APIs and database-driven systems.",
+    "fallbackText": "My resume PDF is not available yet. Get in touch and I will send it over."
+  },
+  "contact": {
+    "intro": "Whether you need a new application, an API, or help with an existing Laravel project, I would love to hear about it.",
+    "ctaLabel": "Start a conversation",
+    "form": {
+      "endpoint": "",
+      "method": "POST",
+      "subjectPrefix": "Portfolio enquiry: "
+    }
+  },
+  "footer": {
+    "tagline": "Scalable backends. Reliable applications. Thoughtful details.",
+    "ctaLabel": "Have a project in mind?",
+    "ctaTitle": "Let's build something great together.",
+    "ctaHighlight": "great"
+  }
+}

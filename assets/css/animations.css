@@ -1,0 +1,64 @@
+/* ==========================================================
+   ANIMATIONS — transform/opacity only, no filters, no
+   per-frame gradient repaints. Reduced-motion aware.
+   ========================================================== */
+
+@keyframes float { 0%, 100% { transform: translate3d(0, 0, 0); } 50% { transform: translate3d(0, -10px, 0); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+@keyframes rise { from { opacity: 0; transform: translate3d(0, 16px, 0); } to { opacity: 1; transform: none; } }
+@keyframes modal-in { from { opacity: 0; transform: translate3d(0, 20px, 0); } to { opacity: 1; transform: none; } }
+@keyframes marquee { to { transform: translate3d(-50%, 0, 0); } }
+
+@supports (animation-timeline: scroll()) {
+  .scroll-progress.is-native { animation: progress linear both; animation-timeline: scroll(root block); }
+  @keyframes progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+}
+
+/* Reveal on scroll (script removes the attribute once finished) */
+.js [data-reveal] {
+  opacity: 0; transform: translate3d(0, 18px, 0);
+  transition: opacity 700ms var(--ease-out), transform 800ms var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 60ms);
+}
+.js [data-reveal].in-view { opacity: 1; transform: none; }
+
+/* Hero headline: words slide up from a mask */
+.js .hero__title .word > span { transform: translate3d(0, 110%, 0); transition: transform 1000ms var(--ease-out); transition-delay: calc(80ms + var(--i, 0) * 80ms); }
+.js .hero__title.is-ready .word > span { transform: none; }
+.js .hero [data-reveal] { transition-delay: calc(200ms + var(--i, 0) * 90ms); }
+
+/* Section headings: words rise from a mask, eyebrow rule draws in.
+   Hidden states only exist while [data-reveal] is present, so nothing snaps when it is removed. */
+.js .section__head[data-reveal] { opacity: 1; transform: none; }
+.js .section__head[data-reveal] .split-word > span { transform: translate3d(0, 110%, 0); }
+.js .section__head[data-reveal].in-view .split-word > span { transform: none; }
+.js .section__head[data-reveal] .eyebrow::after { transform: scaleX(0); }
+.section__head .eyebrow::after { transform-origin: left; transition: transform 900ms var(--ease-out) 200ms; }
+.js .section__head[data-reveal].in-view .eyebrow::after { transform: none; }
+
+/* Portrait unveils with a clip, project images settle from a slight zoom */
+.js .hero__visual[data-reveal] .portrait__frame { clip-path: inset(100% 0 0 0); transition: clip-path 1.3s var(--ease-in-out) 0.35s; }
+.js .hero__visual[data-reveal].in-view .portrait__frame { clip-path: inset(0 0 0 0); }
+.js .project[data-reveal] .project__media img { transform: scale(1.12); transition: transform 1.4s var(--ease-out); }
+.js .project[data-reveal].in-view .project__media img { transform: none; }
+
+/* Footer wordmark & CTA rise in */
+.js .footer__wordmark[data-reveal] { transform: translate3d(0, 30%, 0); }
+.js .footer__wordmark[data-reveal].in-view { transform: none; }
+
+/* Stagger the marquee in with the hero */
+.js .marquee { opacity: 0; transition: opacity 1s ease 0.8s; }
+.js.is-loaded .marquee { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .marquee { opacity: 1; }
+  .js .section__head[data-reveal] .split-word > span, .js .project[data-reveal] .project__media img { transform: none; }
+  .js .hero__visual[data-reveal] .portrait__frame { clip-path: none; }
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; transition-delay: 0ms !important; }
+  .js [data-reveal], .js .hero__title .word > span { opacity: 1; transform: none; }
+  .marquee__track { animation: none; }
+}
+
+html.no-anim *, html.no-anim *::before, html.no-anim *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; transition-delay: 0ms !important; }
+html.no-anim [data-reveal], html.no-anim .hero__title .word > span { opacity: 1 !important; transform: none !important; }

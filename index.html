@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ahmad Riaz — PHP Laravel &amp; Backend Developer</title>
+  <meta name="description" content="Ahmad Riaz is a PHP Laravel &amp; Backend Developer who builds scalable, reliable, modern web applications and powerful backend solutions.">
+  <meta name="theme-color" content="#0d0d0c">
+  <meta name="color-scheme" content="dark light">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ahmad Riaz — Website Developer">
+  <meta property="og:description" content="Scalable, reliable, modern web applications and powerful backend solutions.">
+  <meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0d0c'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%23ece9e1'%3EAR%3C/text%3E%3Ccircle cx='51' cy='47' r='4' fill='%23ff6a3d'/%3E%3C/svg%3E">
+  <!-- Prevent theme flash: runs before first paint -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('portfolio-theme');
+        var theme = (saved === 'light' || saved === 'dark')
+          ? saved
+          : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.classList.add('js');
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+
+  <link rel="stylesheet" href="assets/css/themes.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <script defer src="assets/js/icons.js"></script>
+  <script defer src="assets/js/theme.js"></script>
+  <script defer src="assets/js/app.js"></script>
+  <script defer src="assets/js/animations.js"></script>
+  <script defer src="assets/js/interactions.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__top"><span class="loader__name" id="loaderMark">Ahmad Riaz</span><span id="loaderRole">Backend Developer</span></div>
+    <div class="loader__count"><span id="loaderCount">0</span><small>%</small></div>
+    <div class="loader__bar"><span id="loaderBar"></span></div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Background -->
+  <div class="bg" aria-hidden="true">
+    <span class="bg__blob bg__blob--1"></span>
+    <span class="bg__blob bg__blob--2"></span>
+    <span class="bg__grid"></span>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="logo" aria-label="Home" data-nav-link>
+        <span class="logo__mark" id="logoMark">AR</span>
+        <span class="logo__text" id="logoText">Ahmad Riaz</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Primary"></nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+          <span class="theme-toggle__icon theme-toggle__icon--sun" data-icon="sun"></span>
+          <span class="theme-toggle__icon theme-toggle__icon--moon" data-icon="moon"></span>
+        </button>
+        <a class="btn btn--sm btn--primary nav__cta" id="navResume" href="#resume">
+          <span data-icon="file-text"></span><span>Resume</span>
+        </a>
+        <button class="icon-btn nav__burger" id="navBurger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="burger" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu__nav" id="mobileLinks" aria-label="Mobile"></nav>
+    <div class="mobile-menu__foot" id="mobileSocials"></div>
+  </div>
+
+  <main id="main">
+    <div class="app-error" id="appError" role="alert" hidden></div>
+
+    <!-- HERO -->
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="status-pill" id="heroStatus" data-reveal>
+            <span class="status-pill__dot" aria-hidden="true"></span>
+            <span id="heroStatusText"></span>
+          </p>
+          <p class="hero__eyebrow" id="heroEyebrow" data-reveal></p>
+          <h1 class="hero__title" id="heroTitle"></h1>
+          <p class="hero__desc" id="heroDesc" data-reveal></p>
+          <p class="hero__role" data-reveal>
+            <span data-icon="code-xml"></span><span id="heroRole"></span>
+          </p>
+          <div class="hero__cta" data-reveal>
+            <a class="btn btn--primary btn--lg" id="heroPrimary" href="#projects">
+              <span id="heroPrimaryLabel">View My Work</span><span data-icon="arrow-right"></span>
+            </a>
+            <a class="btn btn--ghost btn--lg" id="heroSecondary" href="#contact">
+              <span id="heroSecondaryLabel">Let's Work Together</span>
+            </a>
+          </div>
+          <ul class="socials" id="heroSocials" data-reveal aria-label="Social links"></ul>
+        </div>
+
+        <div class="hero__visual" data-reveal="scale">
+          <div class="portrait" id="portrait">
+            <div class="portrait__ring" aria-hidden="true"></div>
+            <div class="portrait__frame">
+              <img id="profileImg" alt="" width="600" height="750" decoding="async" fetchpriority="high">
+              <span class="portrait__fallback" style="opacity: 0;" id="profileFallback" hidden></span>
+            </div>
+            <ul class="float-tech" id="floatTech" aria-hidden="true"></ul>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About"><span class="scroll-cue__line"></span></a>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="marquee__track" id="marqueeTrack"></div></div>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="aboutTitle">
+      <div class="container">
+        <header class="section__head" data-section="about"></header>
+        <div class="about">
+          <div class="about__text" data-reveal>
+            <p class="about__lead" id="aboutLead"></p>
+            <div id="aboutParas"></div>
+            <div class="about__notes" id="aboutNotes"></div>
+          </div>
+          <div class="about__side">
+            <ul class="stat-grid" id="aboutStats"></ul>
+            <ul class="pillars" id="aboutPillars"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills" aria-labelledby="skillsTitle">
+      <div class="container">
+        <header class="section__head" data-section="skills"></header>
+        <div class="filters" id="skillFilters" role="group" aria-label="Skill categories"></div>
+        <div class="bento" id="skillGrid"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects" aria-labelledby="projectsTitle">
+      <div class="container">
+        <header class="section__head" data-section="projects"></header>
+        <div class="filters" id="projectFilters" role="group" aria-label="Project categories"></div>
+        <div class="projects" id="projectGrid"></div>
+        <p class="empty" id="projectEmpty" hidden>No projects in this category yet.</p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience" aria-labelledby="experienceTitle">
+      <div class="container">
+        <header class="section__head" data-section="experience"></header>
+        <ol class="timeline" id="experienceList"></ol>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services" aria-labelledby="servicesTitle">
+      <div class="container">
+        <header class="section__head" data-section="services"></header>
+        <ul class="services" id="serviceGrid"></ul>
+        <div class="section__cta" data-reveal>
+          <a class="btn btn--primary btn--lg" href="#contact">
+            <span id="servicesCta">Discuss your requirements</span><span data-icon="arrow-right"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" id="process" aria-labelledby="processTitle">
+      <div class="container">
+        <header class="section__head" data-section="process"></header>
+        <ol class="process" id="processList"></ol>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education" aria-labelledby="educationTitle">
+      <div class="container">
+        <header class="section__head" data-section="education"></header>
+        <ol class="timeline timeline--compact" id="educationList"></ol>
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section class="section" id="resume" aria-labelledby="resumeTitle">
+      <div class="container">
+        <header class="section__head" data-section="resume"></header>
+        <div class="resume card" data-reveal>
+          <div class="resume__main">
+            <h3 class="resume__label"><span data-icon="user"></span>Professional summary</h3>
+            <p id="resumeSummary"></p>
+            <h3 class="resume__label"><span data-icon="cpu"></span>Technical skills</h3>
+            <ul class="chips" id="resumeSkills"></ul>
+          </div>
+          <div class="resume__side">
+            <h3 class="resume__label"><span data-icon="briefcase"></span>Experience</h3>
+            <ul class="resume__list" id="resumeExperience"></ul>
+            <h3 class="resume__label"><span data-icon="graduation-cap"></span>Education</h3>
+            <ul class="resume__list" id="resumeEducation"></ul>
+            <div class="resume__action" id="resumeAction"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--contact" id="contact" aria-labelledby="contactTitle">
+      <div class="container">
+        <header class="section__head" data-section="contact"></header>
+        <div class="contact">
+          <div class="contact__info" data-reveal>
+            <p class="contact__intro" id="contactIntro"></p>
+            <p class="status-pill" id="contactStatus">
+              <span class="status-pill__dot" aria-hidden="true"></span>
+              <span id="contactStatusText"></span>
+            </p>
+            <ul class="contact__list" id="contactList"></ul>
+          </div>
+
+          <form class="form card" id="contactForm" novalidate data-reveal>
+            <div class="field">
+              <label for="cf-name">Full name</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80" aria-describedby="cf-name-err">
+              <p class="field__error" id="cf-name-err" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="cf-email">Email address</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="120" aria-describedby="cf-email-err">
+              <p class="field__error" id="cf-email-err" role="alert"></p>
+            </div>
+            <div class="field field--full">
+              <label for="cf-subject">Subject</label>
+              <input id="cf-subject" name="subject" type="text" required minlength="3" maxlength="120" aria-describedby="cf-subject-err">
+              <p class="field__error" id="cf-subject-err" role="alert"></p>
+            </div>
+            <div class="field field--full">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" required minlength="10" maxlength="2000" aria-describedby="cf-message-err"></textarea>
+              <p class="field__error" id="cf-message-err" role="alert"></p>
+            </div>
+            <div class="form__foot field--full">
+              <button class="btn btn--primary btn--lg" type="submit">
+                <span id="formSubmitLabel">Send message</span><span data-icon="send"></span>
+              </button>
+              <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__cta" data-reveal>
+        <p class="footer__cta-label" id="footCtaLabel">Have a project in mind?</p>
+        <h2 class="footer__cta-title" id="footCtaTitle">Let's build something <em>great</em> together.</h2>
+        <a class="footer__mail" id="footMail" href="#contact"><span id="footMailText">Get in touch</span><span data-icon="arrow-up-right"></span></a>
+      </div>
+
+      <div class="footer__grid">
+        <div class="footer__col footer__brand">
+          <a href="#home" class="logo" aria-label="Back to top">
+            <span class="logo__mark" id="footMark">AK</span>
+            <span class="logo__text" id="footName">Ahmad Riaz</span>
+          </a>
+          <p id="footTagline"></p>
+          <p class="status-pill" id="footStatus"><span class="status-pill__dot" aria-hidden="true"></span><span id="footStatusText"></span></p>
+        </div>
+        <nav class="footer__col" aria-label="Footer"><h3>Navigate</h3><div class="footer__links" id="footNav"></div></nav>
+        <div class="footer__col"><h3>Elsewhere</h3><div class="footer__links" id="footSocials"></div></div>
+        <div class="footer__col"><h3>Details</h3><div class="footer__plain" id="footInfo"></div></div>
+      </div>
+
+      <div class="footer__bar">
+        <p>&copy; <span id="year"></span> <span id="footCopyName">Ahmad Riaz</span></p>
+        <p>Designed &amp; built with HTML, CSS, JS</p>
+        <button class="to-top" id="toTop" type="button"><span>Back to top</span><span data-icon="arrow-up"></span></button>
+      </div>
+    </div>
+    <div class="footer__wordmark" id="footWordmark" data-reveal aria-hidden="true">Ahmad Riaz</div>
+  </footer>
+
+  <!-- Project details modal -->
+  <dialog class="modal" id="projectModal" aria-labelledby="modalTitle">
+    <div class="modal__panel">
+      <button class="icon-btn modal__close" id="modalClose" type="button" aria-label="Close project details"><span data-icon="x"></span></button>
+      <div class="modal__gallery">
+        <div class="modal__stage">
+          <img id="modalImg" alt="" decoding="async">
+          <button class="icon-btn modal__nav modal__nav--prev" id="modalPrev" type="button" aria-label="Previous screenshot"><span data-icon="chevron-left"></span></button>
+          <button class="icon-btn modal__nav modal__nav--next" id="modalNext" type="button" aria-label="Next screenshot"><span data-icon="chevron-right"></span></button>
+        </div>
+        <div class="modal__thumbs" id="modalThumbs"></div>
+      </div>
+      <div class="modal__body">
+        <p class="eyebrow" id="modalCat"></p>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc" class="modal__desc"></p>
+        <p id="modalDetails"></p>
+        <ul class="chips" id="modalTech"></ul>
+        <div class="modal__links" id="modalLinks"></div>
+      </div>
+    </div>
+  </dialog>
+
+  <noscript><p class="noscript">This portfolio needs JavaScript enabled to load its content.</p></noscript>
+  <script type="application/ld+json" id="ldjson">{}</script>
+</body>
+</html>
