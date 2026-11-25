@@ -520,11 +520,12 @@
       clear(action);
       if (ok) {
         var url = safeUrl(r.pdf);
-        action.appendChild(h('a', { class: 'btn btn--primary btn--lg', href: url, download: str(r.downloadName) || '', 'data-magnetic': '' }, [
-          window.Icons.lucide('download'), h('span', { text: 'Download CV' })
+        action.appendChild(h('a', { class: 'btn btn--primary btn--lg', href: url, target: '_blank', rel: 'noopener', 'data-magnetic': '' }, [
+          window.Icons.lucide('file-text'), h('span', { text: 'View Resume' })
         ]));
         navBtn.setAttribute('href', url);
-        navBtn.setAttribute('download', str(r.downloadName) || '');
+        navBtn.setAttribute('target', '_blank');
+        navBtn.setAttribute('rel', 'noopener');
       } else {
         action.appendChild(h('p', { class: 'resume__note', text: str(r.fallbackText) || 'My resume is not available for download yet.' }));
         action.appendChild(h('a', { class: 'btn btn--ghost btn--lg', href: '#contact' }, [window.Icons.lucide('mail'), h('span', { text: 'Request my CV' })]));

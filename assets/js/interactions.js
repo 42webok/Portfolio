@@ -149,6 +149,11 @@
       $('#modalDesc').textContent = p.description || '';
       $('#modalDetails').textContent = p.details || '';
       $('#modalDetails').hidden = !p.details;
+      var text = $('#modalText'), more = $('#modalMore');
+      text.classList.add('is-clamped');
+      more.textContent = 'See more';
+      more.setAttribute('aria-expanded', 'false');
+      more.hidden = true;
 
       var tech = $('#modalTech');
       tech.textContent = '';
@@ -187,11 +192,17 @@
       show(0);
       document.body.classList.add('is-locked');
       dlg.showModal();
+      more.hidden = text.scrollHeight <= text.clientHeight + 1;
     }
 
     $('#projectGrid').addEventListener('click', function (e) {
       var btn = e.target.closest('[data-project]');
       if (btn) open(parseInt(btn.getAttribute('data-project'), 10));
+    });
+    $('#modalMore').addEventListener('click', function () {
+      var t = $('#modalText'), on = t.classList.toggle('is-clamped');
+      this.textContent = on ? 'See more' : 'See less';
+      this.setAttribute('aria-expanded', String(!on));
     });
     $('#modalClose').addEventListener('click', function () { dlg.close(); });
     dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
@@ -281,11 +292,13 @@
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify(payload)
         }).then(function (res) {
-          if (!res.ok) throw new Error('HTTP ' + res.status);
-          form.reset();
-          say('Thank you! Your message has been sent.', 'ok');
-        }).catch(function () {
-          say('Sorry, the message could not be sent. Please email me directly instead.', 'err');
+          return res.json().catch(function () { return {}; }).then(function (j) {
+            if (!res.ok || j.ok === false) { var err = new Error(j.error || ('HTTP ' + res.status)); err.server = !!j.error; throw err; }
+            form.reset();
+            say('Thank you! Your message has been sent.', 'ok');
+          });
+        }).catch(function (err) {
+          say((err && err.server ? err.message + ' ' : 'Sorry, the message could not be sent. ') + 'You can also email me directly.', 'err');
         });
         return;
       }

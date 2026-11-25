@@ -299,6 +299,10 @@ main { display: block; counter-reset: sec; }
 .modal__desc { font-size: var(--fs-lg); }
 .modal__body p { color: var(--text-muted); }
 .modal__body .modal__desc { color: var(--text); }
+.modal__text { display: grid; gap: 1rem; }
+.modal__text.is-clamped { max-height: 11.5rem; overflow: hidden; -webkit-mask-image: linear-gradient(#000 70%, transparent); mask-image: linear-gradient(#000 70%, transparent); }
+.modal__more { justify-self: start; color: var(--accent); font-weight: 600; font-size: var(--fs-sm, 0.9rem); padding: 0.1rem 0; }
+.modal__more:hover { text-decoration: underline; }
 .modal__links { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 0.5rem; }
 
 /* ---------- Timeline (experience & education) ---------- */

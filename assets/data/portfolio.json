@@ -19,7 +19,7 @@
     "profileAlt": "Portrait of Ahmad Riaz",
     "email": "devahmad42@gmail.com",
     "phone": "+92-3057549961",
-    "location": "Pakistan",
+    "location": "Multan, Pakistan",
     "availability": true,
     "availabilityText": "Available for new projects",
     "unavailableText": "Currently booked"
@@ -139,7 +139,7 @@
       "My work centres on PHP and Laravel, backed by MySQL and solid front-end fundamentals in HTML, CSS and JavaScript. That mix lets me own a feature from the database all the way to the screen.",
       "I approach every task by understanding the real problem first, then choosing the simplest design that will still hold up when the product, the traffic and the team get bigger."
     ],
-    "journey": "Replace this text with a short note about your own development journey: how you started, what you learned and where you are heading.",
+    "journey": "I am studying BSCS at the University of Education, Lahore (2023–2027) and have been working professionally at MJ Coders since 2024. Over 2+ years I moved from small PHP projects to production Laravel applications, REST APIs for mobile apps, payment integrations and AI features with the Gemini API. My final-year project, MediHub, is a multi-tenant healthcare platform with a RAG assistant.",
     "approach": "Understand the problem, plan the architecture, build in small verified steps, then measure and refine.",
     "philosophy": "Readable code is a feature. If the next developer cannot understand it quickly, it is not finished.",
     "pillars": [
@@ -171,9 +171,9 @@
     ],
     "stats": [
       {
-        "label": "Technologies",
-        "auto": "skills",
-        "icon": "lucide:cpu"
+        "label": "Experience",
+        "text": "2+ years",
+        "icon": "lucide:briefcase"
       },
       {
         "label": "Professional focus",
@@ -349,7 +349,6 @@
   "projects": [
     {
       "id": 1,
-      "sample": true,
       "title": "MediHub",
       "category": "Laravel",
       "description": "Smart Healthcare Prescription Desk — a multi-tenant hospital platform with e-prescriptions and AI interaction checks, a patient health vault, real-time care-team chat, an AI assistant grounded in hospital documents (RAG), RFID self check-in, and a Free / Paid billing engine.",
@@ -379,7 +378,6 @@
     },
     {
       "id": 2,
-      "sample": true,
       "title": "Rivaaj — Pakistani Clothing E-Commerce Platform",
       "category": "Laravel",
       "description": "Storefront: home, shop with filters (price/size/colour/brand/rating), search with live suggestions, product pages with gallery zoom and variant picker.",
@@ -410,7 +408,6 @@
     },
     {
       "id": 3,
-      "sample": true,
       "title": "Student engagement with AI and Data Analytics",
       "category": "Full Stack",
       "description": "Student engagement is an important factor in academic success. In online and blended learning environments, students interact with different activities",
@@ -430,7 +427,6 @@
     },
     {
       "id": 4,
-      "sample": true,
       "title": "School Fee & Finance Manager",
       "category": "Other",
       "description": "A complete fee voucher, collection and finance management system for schools, with PDF, Email and WhatsApp reminders.",
@@ -451,7 +447,6 @@
     },
     {
       "id": 5,
-      "sample": true,
       "title": "Smart Campus Management System",
       "category": "Laravel",
       "description": "Smart Campus Management System is a comprehensive web-based educational management platform designed to digitize and simplify daily academic and administrative activities within educational institutions.",
@@ -472,21 +467,26 @@
   ],
   "experience": [
     {
-      "sample": true,
-      "company": "Your Company Name",
-      "title": "Your Job Title",
+      "company": "MJ Coders",
+      "title": "Full Stack Developer",
       "type": "Full-time",
-      "start": "Month Year",
+      "start": "2024",
       "end": "Present",
-      "description": "Sample entry. Replace with a real position, or delete this object to hide the section content.",
+      "description": "Laravel and PHP developer at MJ Coders, Multan, building and maintaining production web applications and APIs for clients.",
       "responsibilities": [
-        "Describe a key responsibility.",
-        "Describe a measurable outcome you can verify."
+        "Develop and maintain Laravel and PHP web applications, including backend logic, admin panels and dashboards.",
+        "Design and build custom REST APIs for mobile apps and web front ends, with token-based authentication.",
+        "Integrate payment gateways and third-party APIs into live client systems.",
+        "Work inside existing production codebases: trace issues, ship fixes and new features without breaking existing functionality.",
+        "Fix PDF generation problems and troubleshoot shared-hosting deployment, Composer and email delivery issues.",
+        "Turn client requirements into working features for e-learning, POS and booking systems."
       ],
       "technologies": [
         "Laravel",
         "PHP",
-        "MySQL"
+        "MySQL",
+        "REST API",
+        "AJAX"
       ]
     }
   ],
@@ -566,26 +566,25 @@
   ],
   "education": [
     {
-      "sample": true,
-      "degree": "Your Degree Title",
-      "institution": "Your University",
-      "location": "City, Country",
-      "start": "Year",
-      "end": "Year",
-      "details": "Sample entry. Add relevant coursework, achievements or thesis information, or replace it with your real education."
+      "degree": "Bachelor of Science in Computer Science (BSCS)",
+      "institution": "University of Education, Lahore",
+      "location": "Lahore, Pakistan",
+      "start": "2023",
+      "end": "2027",
+      "details": "Final-year project: MediHub, a multi-tenant healthcare platform with e-prescriptions, RFID check-in and a RAG assistant."
     }
   ],
   "resume": {
-    "pdf": "",
+    "pdf": "assets/resume/Ahmad_Riaz_42webok.pdf",
     "downloadName": "Ahmad_Riaz_42webok.pdf",
-    "summary": "PHP Laravel & Backend Developer focused on scalable, reliable web applications, REST APIs and database-driven systems.",
+    "summary": "PHP and Laravel backend developer with 2+ years of professional experience at MJ Coders, building production web applications, custom REST APIs, payment integrations and AI features with the Google Gemini API.",
     "fallbackText": "My resume PDF is not available yet. Get in touch and I will send it over."
   },
   "contact": {
     "intro": "Whether you need a new application, an API, or help with an existing Laravel project, I would love to hear about it.",
     "ctaLabel": "Start a conversation",
     "form": {
-      "endpoint": "",
+      "endpoint": "https://jinkosolar.site/email/contact.php",
       "method": "POST",
       "subjectPrefix": "Portfolio enquiry: "
     }
